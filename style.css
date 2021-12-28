@@ -2,7 +2,9 @@
     margin: 0;
     padding: 0;
     vertical-align: baseline;
+    box-sizing: content-box;
   }
+  
   html {
     font-family: system-ui, sans-serif;
   }
@@ -10,9 +12,8 @@
     background: linear-gradient(#545454, #454545, #676767);
     display: grid;
     grid-template-columns: 1fr;
-    height: 100vh;
+  
     overflow: hidden;
-    width: 100%;
   }
   .dice {
     align-items: center;

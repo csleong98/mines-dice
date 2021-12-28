@@ -5,88 +5,115 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dice</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" href="./style.css">
 </head>
 <body>
-    <div class="dice">
-        <ol class="die-list even-roll" data-roll="1" id="die-1">
-            <li class="die-item" data-side="1">
-                <span class="dot"></span>
-            </li>
-            <li class="die-item" data-side="2">
-                <span class="dot"></span>
-                <span class="dot"></span>
-            </li>
-            <li class="die-item" data-side="3">
-                <span class="dot"></span>
-                <span class="dot"></span>
-                <span class="dot"></span>
-            </li>
-            <li class="die-item" data-side="4">
-                <span class="dot"></span>
-                <span class="dot"></span>
-                <span class="dot"></span>
-                <span class="dot"></span>
-            </li>
-            <li class="die-item" data-side="5">
-                <span class="dot"></span>
-                <span class="dot"></span>
-                <span class="dot"></span>
-                <span class="dot"></span>
-                <span class="dot"></span>
-            </li>
-            <li class="die-item" data-side="6">
-                <span class="dot"></span>
-                <span class="dot"></span>
-                <span class="dot"></span>
-                <span class="dot"></span>
-                <span class="dot"></span>
-                <span class="dot"></span>
-            </li>
-        </ol>
-        <ol class="die-list odd-roll" data-roll="1" id="die-2">
-            <li class="die-item" data-side="1">
-              <span class="dot"></span>
-            </li>
-            <li class="die-item" data-side="2">
-              <span class="dot"></span>
-              <span class="dot"></span>
-            </li>
-            <li class="die-item" data-side="3">
-              <span class="dot"></span>
-              <span class="dot"></span>
-              <span class="dot"></span>
-            </li>
-            <li class="die-item" data-side="4">
-              <span class="dot"></span>
-              <span class="dot"></span>
-              <span class="dot"></span>
-              <span class="dot"></span>
-            </li>
-            <li class="die-item" data-side="5">
-              <span class="dot"></span>
-              <span class="dot"></span>
-              <span class="dot"></span>
-              <span class="dot"></span>
-              <span class="dot"></span>
-            </li>
-            <li class="die-item" data-side="6">
-              <span class="dot"></span>
-              <span class="dot"></span>
-              <span class="dot"></span>
-              <span class="dot"></span>
-              <span class="dot"></span>
-              <span class="dot"></span>
-            </li>
-          </ol>
+    <!-- As a heading -->
+    <nav class="navbar navbar-light bg-light">
+      <span class="navbar-brand mb-0 h1">Navbar</span>
+    </nav>
+
+    <ul class="nav nav-tabs nav-fill" id="diceTab" role="tablist">
+      <li class="nav-item">
+        <a class="nav-link active" id="twoDices" data-toggle="tab" href="#twoDices" role="tab" aria-controls="two-dices" aria-selected="true">2 Dices</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" id="oneDice" data-toggle="tab" href="#oneDice" role="tab" aria-controls="one-dice" aria-selected="false">1 Dice</a>
+      </li>
+    </ul>
+
+    <div class="tab-content" id="myTabContent">
+      <div class="tab-pane fade show active" id="twoDices" role="tabpanel" aria-labelledby="two-dices-tab">
+          <div class="dice">
+            <ol class="die-list even-roll" data-roll="1" id="die-1">
+                <li class="die-item" data-side="1">
+                    <span class="dot"></span>
+                </li>
+                <li class="die-item" data-side="2">
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                </li>
+                <li class="die-item" data-side="3">
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                </li>
+                <li class="die-item" data-side="4">
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                </li>
+                <li class="die-item" data-side="5">
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                </li>
+                <li class="die-item" data-side="6">
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                </li>
+            </ol>
+            <ol class="die-list odd-roll" data-roll="1" id="die-2">
+                <li class="die-item" data-side="1">
+                  <span class="dot"></span>
+                </li>
+                <li class="die-item" data-side="2">
+                  <span class="dot"></span>
+                  <span class="dot"></span>
+                </li>
+                <li class="die-item" data-side="3">
+                  <span class="dot"></span>
+                  <span class="dot"></span>
+                  <span class="dot"></span>
+                </li>
+                <li class="die-item" data-side="4">
+                  <span class="dot"></span>
+                  <span class="dot"></span>
+                  <span class="dot"></span>
+                  <span class="dot"></span>
+                </li>
+                <li class="die-item" data-side="5">
+                  <span class="dot"></span>
+                  <span class="dot"></span>
+                  <span class="dot"></span>
+                  <span class="dot"></span>
+                  <span class="dot"></span>
+                </li>
+                <li class="die-item" data-side="6">
+                  <span class="dot"></span>
+                  <span class="dot"></span>
+                  <span class="dot"></span>
+                  <span class="dot"></span>
+                  <span class="dot"></span>
+                  <span class="dot"></span>
+                </li>
+              </ol>
+        </div>
+    
+        <span id="number-1"></span>
+        <span id="number-2"></span>
+        <span id="total-number"></span>
+    
+        <button type="button" id="roll-button">Roll Dice</button>
+      </div>
+
+      <div class="tab-pane fade" id="oneDice" role="tabpanel" aria-labelledby="profile-tab">
+        <p>Hi</p>
+      </div>
     </div>
 
-    <span id="number-1"></span>
-    <span id="number-2"></span>
-    <span id="total-number"></span>
-
-    <button type="button" id="roll-button">Roll Dice</button>
-
     <script src="./app.js"></script>
+    <script src="./tab.js"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 </body>
 </html>
