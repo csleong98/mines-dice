@@ -7,25 +7,30 @@
     <title>Dice</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" href="./style.css">
+    <script src="./components/dice-component.js" type="javascript" defer></script>
 </head>
+
 <body>
-    <!-- As a heading -->
+
+<!-- Masthead -->
     <nav class="navbar navbar-light bg-light">
-      <span class="navbar-brand mb-0 h1">Navbar</span>
+      <span class="navbar-brand mb-0 h1">Snake game</span>
     </nav>
 
+<!-- Dice tab -->
     <ul class="nav nav-tabs nav-fill" id="diceTab" role="tablist">
       <li class="nav-item">
-        <a class="nav-link active" id="twoDices" data-toggle="tab" href="#twoDices" role="tab" aria-controls="two-dices" aria-selected="true">2 Dices</a>
+        <a class="nav-link active" id="twoDices-tab" data-toggle="tab" href="#twoDices" role="tab" aria-controls="two-dices" aria-selected="true">2 Dices</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" id="oneDice" data-toggle="tab" href="#oneDice" role="tab" aria-controls="one-dice" aria-selected="false">1 Dice</a>
+        <a class="nav-link" id="oneDice-tab" data-toggle="tab" href="#oneDice" role="tab" aria-controls="one-dice" aria-selected="false">1 Dice</a>
       </li>
     </ul>
 
     <div class="tab-content" id="myTabContent">
-      <div class="tab-pane fade show active" id="twoDices" role="tabpanel" aria-labelledby="two-dices-tab">
+      <div class="tab-pane fade show active" id="twoDices" role="tabpanel" aria-labelledby="twoDices-tab">
           <div class="dice">
+            <!-- <dice-component></dice-component> -->
             <ol class="die-list even-roll" data-roll="1" id="die-1">
                 <li class="die-item" data-side="1">
                     <span class="dot"></span>
@@ -98,22 +103,60 @@
               </ol>
         </div>
     
-        <span id="number-1"></span>
-        <span id="number-2"></span>
-        <span id="total-number"></span>
+        <span id="number-1">0</span>
+        <span id="number-2">0</span>
+        <span>Total = <span id="total-number">0</span></span>
     
-        <button type="button" id="roll-button">Roll Dice</button>
+        <button type="button" id="roll-button-1">Roll</button>
       </div>
 
-      <div class="tab-pane fade" id="oneDice" role="tabpanel" aria-labelledby="profile-tab">
-        <p>Hi</p>
+      <div class="tab-pane fade" id="oneDice" role="tabpanel" aria-labelledby="oneDice-tab">
+        <div class="dice">
+          <ol class="die-list even-roll" data-roll="1" id="die-3">
+            <li class="die-item" data-side="1">
+                <span class="dot"></span>
+            </li>
+            <li class="die-item" data-side="2">
+                <span class="dot"></span>
+                <span class="dot"></span>
+            </li>
+            <li class="die-item" data-side="3">
+                <span class="dot"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+            </li>
+            <li class="die-item" data-side="4">
+                <span class="dot"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+            </li>
+            <li class="die-item" data-side="5">
+                <span class="dot"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+            </li>
+            <li class="die-item" data-side="6">
+                <span class="dot"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+            </li>
+          </ol>
+          <span id="number-3">0</span>
+        </div>
+        <button type="button" id="roll-button-2">Roll</button>
       </div>
     </div>
 
     <script src="./app.js"></script>
-    <script src="./tab.js"></script>
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
 </body>
 </html>

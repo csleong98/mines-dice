@@ -1,9 +1,11 @@
 let number1 = 0;
 let number2 = 0;
+let number3 = 0;
 let totalNumber = 0;
+let numberGenerated = 0;
 
-// Roll 2 dices together
-  function rollDice() {
+// Roll 2 dices
+  function rollTwoDice() {
 
     refreshNumber()
 
@@ -16,6 +18,7 @@ let totalNumber = 0;
 
           setTimeout(function()
           {
+            number1 = numberGenerated
             announceNumber1(number1)
           }, 1250)
 
@@ -41,15 +44,38 @@ let totalNumber = 0;
     rollSecondDice()
     addition()
   }
-  
+
+// Rooll 1 dice
+  function rollDice() {
+
+    refreshNumber()
+
+      function rollThirdDice() {
+          const dice = [...document.querySelectorAll("#die-3")];
+          dice.forEach(die => {
+            toggleClasses(die);
+            die.dataset.roll = getRandomNumber1(1, 6);
+          });
+
+          setTimeout(function()
+          {
+            number3 = numberGenerated
+            announceNumber3(number3)
+          }, 1250)
+
+          return number3
+      }
+
+    rollThirdDice()
+  }
 
 // Generate numbers randomly
   function getRandomNumber1(min, max) {
     min = Math.ceil(min);
     max = Math.floor(max);
-    // Get a random number between 1 and 6 
-    number1 =  Math.floor(Math.random() * (max - min + 1)) + min;
-    return number1
+    // this is written to be reusable to support the 1 Dice option
+    numberGenerated =  Math.floor(Math.random() * (max - min + 1)) + min;
+    return numberGenerated
   }
 
   function getRandomNumber2(min, max) {
@@ -80,6 +106,7 @@ let totalNumber = 0;
     document.getElementById("number-1").innerHTML = 0;
     document.getElementById("number-2").innerHTML = 0;
     document.getElementById("total-number").innerHTML = 0;
+    document.getElementById("number-3").innerHTML = 0;
   }
 
 // Show first dice number
@@ -92,5 +119,11 @@ let totalNumber = 0;
     document.getElementById("number-2").innerHTML = number2;
   }
 
+// Show third dice number
+  function announceNumber3() {
+    document.getElementById("number-3").innerHTML = number3;
+  }
+
 // Activate dice roll
-  document.getElementById("roll-button").addEventListener("click", rollDice);
+  document.getElementById("roll-button-1").addEventListener("click", rollTwoDice);
+  document.getElementById("roll-button-2").addEventListener("click", rollDice);
