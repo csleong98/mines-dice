@@ -30,8 +30,8 @@
     <div class="tab-content" id="myTabContent">
       <div class="tab-pane fade show active" id="twoDices" role="tabpanel" aria-labelledby="twoDices-tab">
           <div class="dice">
-            <!-- <dice-component></dice-component> -->
-            <ol class="die-list even-roll" data-roll="1" id="die-1">
+            <div class="dice-1">
+              <ol class="die-list even-roll" data-roll="1" id="die-1">
                 <li class="die-item" data-side="1">
                     <span class="dot"></span>
                 </li>
@@ -66,7 +66,15 @@
                     <span class="dot"></span>
                 </li>
             </ol>
-            <ol class="die-list odd-roll" data-roll="1" id="die-2">
+            <br>
+            <br>
+
+            <span class="dice-number" id="number-1">0</span>
+
+            </div>
+
+            <div class="dice-2">
+              <ol class="die-list odd-roll" data-roll="1" id="die-2">
                 <li class="die-item" data-side="1">
                   <span class="dot"></span>
                 </li>
@@ -101,55 +109,64 @@
                   <span class="dot"></span>
                 </li>
               </ol>
+              <br>
+              <br>
+
+              <span class="dice-number" id="number-2">0</span>
+
+            </div>
+            <div class="total-number">Total = <span id="total-number">0</span></div>
+            <button type="button" id="roll-button-1" class="btn btn-primary btn-lg btn-block">Roll</button>
+
         </div>
-    
-        <span id="number-1">0</span>
-        <span id="number-2">0</span>
-        <span>Total = <span id="total-number">0</span></span>
-    
-        <button type="button" id="roll-button-1">Roll</button>
       </div>
 
       <div class="tab-pane fade" id="oneDice" role="tabpanel" aria-labelledby="oneDice-tab">
         <div class="dice">
-          <ol class="die-list even-roll" data-roll="1" id="die-3">
-            <li class="die-item" data-side="1">
-                <span class="dot"></span>
-            </li>
-            <li class="die-item" data-side="2">
-                <span class="dot"></span>
-                <span class="dot"></span>
-            </li>
-            <li class="die-item" data-side="3">
-                <span class="dot"></span>
-                <span class="dot"></span>
-                <span class="dot"></span>
-            </li>
-            <li class="die-item" data-side="4">
-                <span class="dot"></span>
-                <span class="dot"></span>
-                <span class="dot"></span>
-                <span class="dot"></span>
-            </li>
-            <li class="die-item" data-side="5">
-                <span class="dot"></span>
-                <span class="dot"></span>
-                <span class="dot"></span>
-                <span class="dot"></span>
-                <span class="dot"></span>
-            </li>
-            <li class="die-item" data-side="6">
-                <span class="dot"></span>
-                <span class="dot"></span>
-                <span class="dot"></span>
-                <span class="dot"></span>
-                <span class="dot"></span>
-                <span class="dot"></span>
-            </li>
-          </ol>
+          <div class="dice-3">
+            <ol class="die-list even-roll" data-roll="1" id="die-3">
+              <li class="die-item" data-side="1">
+                  <span class="dot"></span>
+              </li>
+              <li class="die-item" data-side="2">
+                  <span class="dot"></span>
+                  <span class="dot"></span>
+              </li>
+              <li class="die-item" data-side="3">
+                  <span class="dot"></span>
+                  <span class="dot"></span>
+                  <span class="dot"></span>
+              </li>
+              <li class="die-item" data-side="4">
+                  <span class="dot"></span>
+                  <span class="dot"></span>
+                  <span class="dot"></span>
+                  <span class="dot"></span>
+              </li>
+              <li class="die-item" data-side="5">
+                  <span class="dot"></span>
+                  <span class="dot"></span>
+                  <span class="dot"></span>
+                  <span class="dot"></span>
+                  <span class="dot"></span>
+              </li>
+              <li class="die-item" data-side="6">
+                  <span class="dot"></span>
+                  <span class="dot"></span>
+                  <span class="dot"></span>
+                  <span class="dot"></span>
+                  <span class="dot"></span>
+                  <span class="dot"></span>
+              </li>
+            </ol>
+            <br>
+            <br>
+          </div>
           <span id="number-3">0</span>
+          <button type="button" id="roll-button-2" class="btn btn-primary btn-lg btn-block">Roll</button>
         </div>
-        <button type="button" id="roll-button-2">Roll</button>
+
+        
       </div>
     </div>
 
