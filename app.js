@@ -1,9 +1,7 @@
 let number1 = 0;
 let number2 = 0;
 let number3 = 0;
-let number4 = 0;
 let totalNumber = 0;
-let totalNumber2 = 0;
 let numberGenerated = 0;
 
 // Roll 2 dices
@@ -14,11 +12,13 @@ let numberGenerated = 0;
       function rollFirstDice() {
           const dice = [...document.querySelectorAll("#die-1")];
           dice.forEach(die => {
-            toggleClasses(die)
+            toggleClasses(die);
             die.dataset.roll = getRandomNumber1(1, 6);
           });
+
           setTimeout(function()
           {
+            number1 = numberGenerated
             announceNumber1(number1)
           }, 1250)
 
@@ -27,12 +27,10 @@ let numberGenerated = 0;
 
       function rollSecondDice() {
           const dice = [...document.querySelectorAll("#die-2")];
-
-          dice.forEach(function(die) {
-            toggleClasses(die)
+          dice.forEach(die => {
+            toggleClasses(die);
             die.dataset.roll = getRandomNumber2(1, 6);
-            
-          })
+          });
 
           setTimeout(function()
           {
@@ -47,7 +45,7 @@ let numberGenerated = 0;
     addition()
   }
 
-// Roll 1 dice
+// Rooll 1 dice
   function rollDice() {
 
     refreshNumber()
@@ -55,36 +53,20 @@ let numberGenerated = 0;
       function rollThirdDice() {
           const dice = [...document.querySelectorAll("#die-3")];
           dice.forEach(die => {
-            toggleClasses2(die);
-            die.dataset.roll = getRandomNumber3(1, 6);
+            toggleClasses(die);
+            die.dataset.roll = getRandomNumber1(1, 6);
           });
 
           setTimeout(function()
           {
+            number3 = numberGenerated
             announceNumber3(number3)
           }, 1250)
 
           return number3
       }
 
-      function rollFourthDice() {
-        const dice = [...document.querySelectorAll("#die-4")];
-        dice.forEach(die => {
-          toggleClasses2(die);
-          die.dataset.roll = getRandomNumber4(1, 6);
-        });
-
-        setTimeout(function()
-        {
-          announceNumber4(number4)
-        }, 1250)
-
-        return number4
-    }
-
     rollThirdDice()
-    rollFourthDice()
-    addition2()
   }
 
 // Generate numbers randomly
@@ -92,8 +74,8 @@ let numberGenerated = 0;
     min = Math.ceil(min);
     max = Math.floor(max);
     // this is written to be reusable to support the 1 Dice option
-    number1 =  Math.floor(Math.random() * (max - min + 1)) + min;
-    return number1
+    numberGenerated =  Math.floor(Math.random() * (max - min + 1)) + min;
+    return numberGenerated
   }
 
   function getRandomNumber2(min, max) {
@@ -104,31 +86,10 @@ let numberGenerated = 0;
     return number2
   }
 
-  function getRandomNumber3(min, max) {
-    min = Math.ceil(min);
-    max = Math.floor(max);
-    // this is written to be reusable to support the 1 Dice option
-    number3 =  Math.floor(Math.random() * (max - min + 1)) + min;
-    return number3
-  }
-
-  function getRandomNumber4(min, max) {
-    min = Math.ceil(min);
-    max = Math.floor(max);
-    // Get a random number between 1 and 6 
-    number4 =  Math.floor(Math.random() * (max - min + 1)) + min;
-    return number4
-  }
-
 // Toggle dices
   function toggleClasses(die) {
-    die.classList.toggle("dice1");
-    die.classList.toggle("dice2");
-  }
-
-  function toggleClasses2(die) {
-    die.classList.toggle("dice3");
-    die.classList.toggle("dice4");
+    die.classList.toggle("odd-roll");
+    die.classList.toggle("even-roll");
   }
 
 // Get total number from 2 dices and show total number
@@ -140,23 +101,12 @@ let numberGenerated = 0;
     }, 1400)
   }
 
-  function addition2() {
-    setTimeout(function() {
-      totalNumber2 = number3 + number4;
-      document.getElementById("total-number2").innerHTML = totalNumber2;
-      // console.log(totalNumber);
-    }, 1400)
-  }
-
 // Set all numbers to zero before new roll
   function refreshNumber() {
     document.getElementById("number-1").innerHTML = 0;
     document.getElementById("number-2").innerHTML = 0;
     document.getElementById("total-number").innerHTML = 0;
-
     document.getElementById("number-3").innerHTML = 0;
-    document.getElementById("number-4").innerHTML = 0;
-    document.getElementById("total-number2").innerHTML = 0;
   }
 
 // Show first dice number
@@ -172,11 +122,6 @@ let numberGenerated = 0;
 // Show third dice number
   function announceNumber3() {
     document.getElementById("number-3").innerHTML = number3;
-  }
-
-// Show third dice number
-  function announceNumber4() {
-    document.getElementById("number-4").innerHTML = number4;
   }
 
 // Activate dice roll
