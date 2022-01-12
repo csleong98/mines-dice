@@ -4,7 +4,7 @@
     display: grid;
     /* grid-column-gap: 2rem; */
     grid-template-columns: repeat(2, minmax(8rem, 1fr));
-    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
     justify-items: center;
     padding: 2rem;
     perspective: 600px;
@@ -18,10 +18,10 @@
     width: 6rem;
     list-style-type: none;
     transform-style: preserve-3d;
-    margin: 1rem 0;
+    margin: 4rem 1rem 1rem 1rem;
   }
 
-  .die-item {
+  #die-1 > .die-item {
     position: absolute;
     background-color: #fccc2d;
     box-shadow: inset 0rem 0rem 0.2rem rgba(186, 194, 24, 0.372),
@@ -42,7 +42,28 @@
     width: 100%;
   }
 
-  #twoDices > .dice > .die-list >.die-item > .dot {
+  #die-2 > .die-item {
+    position: absolute;
+    background-color: #a5e83a;
+    box-shadow: inset 0rem 0rem 0.2rem rgba(186, 194, 24, 0.372),
+                inset 0rem 0rem 0.2rem rgba(186, 194, 24, 0.372);
+    /* border: 1px solid #072235; */
+    border-radius: 1.5em;
+    display: grid;
+    grid-column: 1;
+    grid-row: 1;
+    grid-template-areas:
+      "one two three"
+      "four five six"
+      "seven eight nine";
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    height: 100%;
+    padding: 1rem;
+    width: 100%;
+  }
+
+  #die-1 >.die-item > .dot {
     align-self: center;
     background-color: #f74d1a;
     border-radius: 50%;
@@ -174,7 +195,7 @@
   }
 
   /* Inner background of dice */
-  .back-face-1 {
+  #die-1 > .back-face-1 {
     transform: rotateX(360deg) rotateY(720deg) rotateZ(360deg);
     content: '';
     position: absolute;
@@ -185,7 +206,7 @@
     border-radius: 1rem;
   }
 
-  .back-face-2 {
+  #die-1 > .back-face-2 {
     transform: rotateX(450deg) rotateY(720deg) rotateZ(360deg);
     content: '';
     position: absolute;
@@ -196,7 +217,7 @@
     border-radius: 1rem;
   }
 
-  .back-face-3 {
+  #die-1 > .back-face-3 {
     transform: rotateX(360deg) rotateY(630deg) rotateZ(360deg);
     content: '';
     position: absolute;
@@ -207,7 +228,7 @@
     border-radius: 1rem;
   }
 
-  .back-face-4 {
+  #die-1 > .back-face-4 {
     transform: rotateX(360deg) rotateY(810deg) rotateZ(360deg);
     content: '';
     position: absolute;
@@ -218,7 +239,7 @@
     border-radius: 1rem;
   }
 
-  .back-face-5 {
+  #die-1 > .back-face-5 {
     transform: rotateX(270deg) rotateY(720deg) rotateZ(360deg);
     content: '';
     position: absolute;
@@ -229,11 +250,77 @@
     border-radius: 1rem;
   }
 
-  .back-face-6 {
+  #die-1 > .back-face-6 {
     transform: rotateX(360deg) rotateY(900deg) rotateZ(360deg);
     content: '';
     position: absolute;
     background-color: #fccc2d;
+    height: 100%;
+    width: 100%;
+    padding: 1rem;
+    border-radius: 1rem;
+  }
+
+  #die-2 > .back-face-1 {
+    transform: rotateX(360deg) rotateY(720deg) rotateZ(360deg);
+    content: '';
+    position: absolute;
+    background-color: #a5e83a;
+    height: 100%;
+    width: 100%;
+    padding: 1rem;
+    border-radius: 1rem;
+  }
+
+  #die-2 > .back-face-2 {
+    transform: rotateX(450deg) rotateY(720deg) rotateZ(360deg);
+    content: '';
+    position: absolute;
+    background-color: #a5e83a;
+    height: 100%;
+    width: 100%;
+    padding: 1rem;
+    border-radius: 1rem;
+  }
+
+  #die-2 > .back-face-3 {
+    transform: rotateX(360deg) rotateY(630deg) rotateZ(360deg);
+    content: '';
+    position: absolute;
+    background-color: #a5e83a;
+    height: 100%;
+    width: 100%;
+    padding: 1rem;
+    border-radius: 1rem;
+  }
+
+  #die-2 > .back-face-4 {
+    transform: rotateX(360deg) rotateY(810deg) rotateZ(360deg);
+    content: '';
+    position: absolute;
+    background-color: #a5e83a;
+    height: 100%;
+    width: 100%;
+    padding: 1rem;
+    border-radius: 1rem;
+  }
+
+  #die-2 > .back-face-5 {
+    transform: rotateX(270deg) rotateY(720deg) rotateZ(360deg);
+    content: '';
+    position: absolute;
+    background-color: #a5e83a;
+    height: 100%;
+    width: 100%;
+    padding: 1rem;
+    border-radius: 1rem;
+  }
+
+  #die-2 > .back-face-6 {
+    transform: rotateX(360deg) rotateY(900deg) rotateZ(360deg);
+    content: '';
+    position: absolute;
+    background-color: #a5e83a;
     height: 100%;
     width: 100%;
     padding: 1rem;
@@ -260,6 +347,7 @@
     color: #112e7e;
     grid-column-start: 1;
     grid-column-end: 2;
+    display: none;
   }
 
   #number-2 {
@@ -268,22 +356,23 @@
     color: #112e7e;
     grid-column-start: 2;
     grid-column-end: 3;
+    display: none;
   }
 
   /* Total numbers */
   .total-number {
-    font-size:1.8rem;
+    font-size:6rem;
     color: #112e7e;
-    grid-row-start: 3;
-    grid-row-end: 4;
+    grid-row-start: 2;
+    grid-row-end: 3;
     grid-column-start: 1;
     grid-column-end: 5;
   }
 
   /* Roll dice button */
   #roll-button-1 {
-    grid-row-start: 4;
-    grid-row-end: 5;
+    grid-row-start: 3;
+    grid-row-end: 4;
     grid-column-start: 1;
     grid-column-end: 5;
   }

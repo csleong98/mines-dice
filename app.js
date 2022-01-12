@@ -16,11 +16,7 @@ let numberGenerated = 0;
             die.dataset.roll = getRandomNumber1(1, 6);
           });
 
-          setTimeout(function()
-          {
             number1 = numberGenerated
-            announceNumber1(number1)
-          }, 1250)
 
           return number1
       }
@@ -32,10 +28,10 @@ let numberGenerated = 0;
             die.dataset.roll = getRandomNumber2(1, 6);
           });
 
-          setTimeout(function()
-          {
-            announceNumber2(number2)
-          }, 1250)
+          // setTimeout(function()
+          // {
+          //   announceNumber2(number2)
+          // }, 1250)
 
           return number2
       }
@@ -103,20 +99,20 @@ let numberGenerated = 0;
 
 // Set all numbers to zero before new roll
   function refreshNumber() {
-    document.getElementById("number-1").innerHTML = 0;
-    document.getElementById("number-2").innerHTML = 0;
+    // document.getElementById("number-1").innerHTML = 0;
+    // document.getElementById("number-2").innerHTML = 0;
     document.getElementById("total-number").innerHTML = 0;
     document.getElementById("number-3").innerHTML = 0;
   }
 
 // Show first dice number
   function announceNumber1() {
-    document.getElementById("number-1").innerHTML = number1;
+    // document.getElementById("number-1").innerHTML = number1;
   }
 
 // Show second dice number
   function announceNumber2() {
-    document.getElementById("number-2").innerHTML = number2;
+    // document.getElementById("number-2").innerHTML = number2;
   }
 
 // Show third dice number
