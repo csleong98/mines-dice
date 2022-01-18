@@ -67,7 +67,7 @@
     transition: transform 1.25s ease-out;
   }
 
-  @media (min-width: 600px) {
+  /* @media (min-width: 600px) {
     .dice {
      perspective: 1300px;
     }
@@ -93,4 +93,4 @@
     .dice-3-face {
       margin-left: 7.5rem;
     }
-  }
+  } */
