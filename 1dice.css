@@ -1,9 +1,5 @@
 /* Dice construct */
 #oneDice > .dice {
-    /* 
-    grid-template-rows: 1fr 1fr;
-    justify-items: center;
-    padding: 2rem; */
     display: grid;
     grid-template-columns: 1fr;
     -webkit-perspective: 1000px;
@@ -16,23 +12,25 @@
   #dice-3 > .die-list, 
   #dice-3 > .die-list > .back-item, 
   #dice-3 > .die-list > .die-item, 
-  #dice-3 > .die-list > .back-face,
+  #dice-3 > .die-list > .back-face{
+    height: 9rem;
+    width: 9rem;
+  }
   
   #dices-2 > .die-list, 
   #dices-2 > .die-list > .back-item, 
   #dices-2 > .die-list > .die-item, 
   #dices-2 > .die-list > .back-face{
-    height: 9rem;
-    width: 9rem;
+    height: 6.5rem;
+    width: 6.5rem;
   }
-
 
   #dice-3 > .die-list,
   #dices-2 > .die-list
   {
     -webkit-transform-style: preserve-3d;
     transform-style: preserve-3d;
-    margin: 5rem auto 5rem;
+    margin: 5rem auto 3.5rem;
   }
 
   #dice-3 > .die-list> .die-item, 
@@ -74,78 +72,78 @@
   }
 
   .even-roll[data-roll="1"] {
-    transform: rotateX(10deg) rotateY(720deg) rotateZ(360deg);
+    transform: rotateX(5deg) rotateY(720deg) rotateZ(360deg);
   }
   .even-roll[data-roll="2"] {
-    transform: rotateX(100deg) rotateY(720deg) rotateZ(360deg);
+    transform: rotateX(5deg) rotateY(720deg) rotateZ(360deg);
   }
   .even-roll[data-roll="3"] {
-    transform: rotateX(10deg) rotateY(630deg) rotateZ(360deg);
+    transform: rotateX(5deg) rotateY(630deg) rotateZ(360deg);
   }
   .even-roll[data-roll="4"] {
-    transform: rotateX(10deg) rotateY(810deg) rotateZ(360deg);
+    transform: rotateX(5deg) rotateY(810deg) rotateZ(360deg);
   }
   .even-roll[data-roll="5"] {
-    transform: rotateX(280deg) rotateY(720deg) rotateZ(360deg);
+    transform: rotateX(275deg) rotateY(720deg) rotateZ(360deg);
   }
   .even-roll[data-roll="6"] {
-    transform: rotateX(10deg) rotateY(900deg) rotateZ(360deg);
+    transform: rotateX(5deg) rotateY(900deg) rotateZ(360deg);
   }
 
   .odd-roll[data-roll="1"] {
-    transform: rotateX(-350deg) rotateY(-720deg) rotateZ(-360deg);
+    transform: rotateX(-355deg) rotateY(-720deg) rotateZ(-360deg);
   }
   .odd-roll[data-roll="2"] {
     transform: rotateX(-260deg) rotateY(-720deg) rotateZ(-360deg);
   }
   .odd-roll[data-roll="3"] {
-    transform: rotateX(-350deg) rotateY(-810deg) rotateZ(-360deg);
+    transform: rotateX(-355deg) rotateY(-810deg) rotateZ(-360deg);
   }
   .odd-roll[data-roll="4"] {
-    transform: rotateX(-350deg) rotateY(-630deg) rotateZ(-360deg);
+    transform: rotateX(-355deg) rotateY(-630deg) rotateZ(-360deg);
   }
   .odd-roll[data-roll="5"] {
-    transform: rotateX(-440deg) rotateY(-720deg) rotateZ(-360deg);
+    transform: rotateX(-445deg) rotateY(-720deg) rotateZ(-360deg);
   }
   .odd-roll[data-roll="6"] {
-    transform: rotateX(-350deg) rotateY(-900deg) rotateZ(-360deg);
+    transform: rotateX(-355deg) rotateY(-900deg) rotateZ(-360deg);
   }
 
-  .die-list > .back-item[data-side="1"]{
+  #dice-3 > .die-list > .back-item[data-side="1"]{
     transform: rotate3d(0, 0, 0, 90deg) translateZ(4.8rem);
   }
-  .die-list > .back-item[data-side="2"]{
+  #dice-3 > .die-list > .back-item[data-side="2"]{
     transform: rotate3d(-1, 0, 0, 90deg) translateZ(4.8rem);
   }
-  .die-list > .back-item[data-side="3"]{
+  #dice-3 > .die-list > .back-item[data-side="3"]{
     transform: rotate3d(0, 1, 0, 90deg) translateZ(4.8rem);
   }
-  .die-list > .back-item[data-side="4"]{
+  #dice-3 > .die-list > .back-item[data-side="4"]{
     transform: rotate3d(0, -1, 0, 90deg) translateZ(4.8rem);
   }
-  .die-list > .back-item[data-side="5"]{
+  #dice-3 > .die-list > .back-item[data-side="5"]{
     transform: rotate3d(1, 0, 0, 90deg) translateZ(4.6rem);
   }
-  .die-list > .back-item[data-side="6"]{
+  #dice-3 > .die-list > .back-item[data-side="6"]{
     transform: rotate3d(1, 0, 0, 180deg) translateZ(4.8rem);
   }
 
-  [data-side="1"] {
+  #dice-3 > .die-list > .die-item[data-side="1"] {
     transform: rotate3d(0, 0, 0, 90deg) translateZ(5rem);
   }
-  [data-side="2"] {
+  #dice-3 > .die-list > .die-item[data-side="2"] {
     transform: rotate3d(-1, 0, 0, 90deg) translateZ(5rem);
   }
-  [data-side="3"] {
+  #dice-3 > .die-list > .die-item[data-side="3"] {
     transform: rotate3d(0, 1, 0, 90deg) translateZ(5rem);
   }
-  [data-side="4"] {
+  #dice-3 > .die-list > .die-item[data-side="4"] {
     transform: rotate3d(0, -1, 0, 90deg) translateZ(5rem);
   }
-  [data-side="5"] {
+  #dice-3 > .die-list > .die-item[data-side="5"] {
     transform: rotate3d(1, 0, 0, 90deg) translateZ(5rem);
   }
-  [data-side="6"] {
+  #dice-3 > .die-list > .die-item[data-side="6"] {
     transform: rotate3d(1, 0, 0, 180deg) translateZ(5rem);
   }
 
