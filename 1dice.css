@@ -247,7 +247,7 @@
   /* Dice number */
   #number-3 {
     font-size: 6rem;
-    color: #112e7e;
+    color: #000000;
     grid-column-start: 1;
     grid-column-end:2;
   }
