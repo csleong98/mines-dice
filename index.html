@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dice</title>
+    <title>Virtual Dice Roller</title>
     <link rel="stylesheet" href="bootstrap/bootstrap.min.css">
     <link rel="stylesheet" href="bootstrap/bootstrap-reboot.min.css">
     <link rel="stylesheet" href="bootstrap/bootstrap-grid.min.css">
@@ -17,21 +17,22 @@
 <body>
 <!-- Masthead -->
     <nav class="navbar navbar-light">
-      <span class="navbar-brand p-2 h1">Rolling Dices</span>
+      <span class="navbar-brand p-2 h1">Virtual Dice Roller</span>
     </nav>
 
 <!-- Dice tab -->
     <ul class="nav nav-tabs nav-fill" id="diceTab" role="tablist">
       <li class="nav-item">
-        <a class="nav-link active" id="twoDices-tab" data-toggle="tab" href="#twoDices" role="tab" aria-controls="two-dices" aria-selected="true">2 Dices</a>
+        <a class="nav-link active" id="oneDice-tab" data-toggle="tab" href="#oneDice" role="tab" aria-controls="one-dice" aria-selected="false">1 Dice</a>
       </li>
+
       <li class="nav-item">
-        <a class="nav-link" id="oneDice-tab" data-toggle="tab" href="#oneDice" role="tab" aria-controls="one-dice" aria-selected="false">1 Dice</a>
+        <a class="nav-link" id="twoDices-tab" data-toggle="tab" href="#twoDices" role="tab" aria-controls="two-dices" aria-selected="true">2 Dices</a>
       </li>
     </ul>
 
     <div class="tab-content" id="myTabContent">
-      <div class="tab-pane fade show active" id="twoDices" role="tabpanel" aria-labelledby="twoDices-tab">
+      <div class="tab-pane fade" id="twoDices" role="tabpanel" aria-labelledby="twoDices-tab">
           <div class="dice" id="dices-2">
               <div class="die-list even-roll dice-1-face" data-roll="1" id="die-1">  
                 <div class="back-item" data-side="1"></div>
@@ -124,7 +125,7 @@
         </div>
       </div>
 
-      <div class="tab-pane fade" id="oneDice" role="tabpanel" aria-labelledby="oneDice-tab">
+      <div class="tab-pane fade show active" id="oneDice" role="tabpanel" aria-labelledby="oneDice-tab">
         <div class="dice" id="dice-3">
             <div class="die-list even-roll dice-3-face" data-roll="1" id="die-3">
               <div class="back-item" data-side="1"></div>
