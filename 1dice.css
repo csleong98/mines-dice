@@ -75,7 +75,7 @@
     transform: rotateX(5deg) rotateY(720deg) rotateZ(360deg);
   }
   .even-roll[data-roll="2"] {
-    transform: rotateX(5deg) rotateY(720deg) rotateZ(360deg);
+    transform: rotateX(98deg) rotateY(720deg) rotateZ(360deg);
   }
   .even-roll[data-roll="3"] {
     transform: rotateX(5deg) rotateY(630deg) rotateZ(360deg);
