@@ -3,8 +3,8 @@
     display: grid;
     grid-template-columns: repeat(2, minmax(8rem, 1fr));
     justify-items: center;
-    perspective: 1015px;
-    perspective-origin: 50% 53%;
+    perspective: 1154px;
+    perspective-origin: 51% 68%;
     margin: 1.8rem;
   }
   
