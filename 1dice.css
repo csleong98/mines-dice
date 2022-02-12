@@ -75,7 +75,7 @@
     transform: rotateX(5deg) rotateY(720deg) rotateZ(360deg);
   }
   .even-roll[data-roll="2"] {
-    transform: rotateX(98deg) rotateY(720deg) rotateZ(360deg);
+    transform: rotateX(92deg) rotateY(720deg) rotateZ(360deg);
   }
   .even-roll[data-roll="3"] {
     transform: rotateX(5deg) rotateY(630deg) rotateZ(360deg);
@@ -94,7 +94,7 @@
     transform: rotateX(-355deg) rotateY(-720deg) rotateZ(-360deg);
   }
   .odd-roll[data-roll="2"] {
-    transform: rotateX(-260deg) rotateY(-720deg) rotateZ(-360deg);
+    transform: rotateX(-268deg) rotateY(-720deg) rotateZ(-360deg);
   }
   .odd-roll[data-roll="3"] {
     transform: rotateX(-355deg) rotateY(-810deg) rotateZ(-360deg);
