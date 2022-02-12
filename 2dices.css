@@ -42,22 +42,22 @@
 
 
   #dices-2 > .die-list > .back-item[data-side="1"]{
-    transform: rotate3d(0, 0, 0, 90deg) translateZ(3.7rem);
+    transform: rotate3d(0, 0, 0, 90deg) translateZ(3.66rem);
   }
   #dices-2 > .die-list > .back-item[data-side="2"]{
-    transform: rotate3d(-1, 0, 0, 90deg) translateZ(3.7rem);
+    transform: rotate3d(-1, 0, 0, 90deg) translateZ(3.66rem);
   }
   #dices-2 > .die-list > .back-item[data-side="3"]{
-    transform: rotate3d(0, 1, 0, 90deg) translateZ(3.7rem);
+    transform: rotate3d(0, 1, 0, 90deg) translateZ(3.66rem);
   }
   #dices-2 > .die-list > .back-item[data-side="4"]{
-    transform: rotate3d(0, -1, 0, 90deg) translateZ(3.7rem);
+    transform: rotate3d(0, -1, 0, 90deg) translateZ(3.66rem);
   }
   #dices-2 > .die-list > .back-item[data-side="5"]{
-    transform: rotate3d(1, 0, 0, 90deg) translateZ(3.7rem);
+    transform: rotate3d(1, 0, 0, 90deg) translateZ(3.66rem);
   }
   #dices-2 > .die-list > .back-item[data-side="6"]{
-    transform: rotate3d(1, 0, 0, 180deg) translateZ(3.7rem);
+    transform: rotate3d(1, 0, 0, 180deg) translateZ(3.66rem);
   }
 
   #dices-2 > .die-list > .die-item[data-side="1"] {
