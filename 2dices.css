@@ -4,14 +4,14 @@
     grid-template-columns: repeat(2, minmax(8rem, 1fr));
     justify-items: center;
     perspective: 1154px;
-    perspective-origin: 51% 68%;
+    perspective-origin: 50% 80%;
     margin: 1.8rem;
   }
   
   #twoDices > .dice > #die-1 > .die-item {
     position: absolute;
     background-color: #fccc2d;
-    border: 7.8px solid #eec12a;
+    border: 7.75px solid #eec12a;
     border-radius: 1.5em;
     display: grid;
     grid-column: 1;
@@ -27,7 +27,7 @@
   #twoDices > .dice > #die-2 > .die-item {
     position: absolute;
     background-color: #a5e83a;
-    border: 7.8px solid #9edf36;
+    border: 7.75px solid #9edf36;
     border-radius: 1.5em;
     display: grid;
     grid-column: 1;
@@ -42,41 +42,41 @@
 
 
   #dices-2 > .die-list > .back-item[data-side="1"]{
-    transform: rotate3d(0, 0, 0, 90deg) translateZ(3.66rem);
+    transform: rotate3d(0, 0, 0, 90deg) translateZ(3.7rem);
   }
   #dices-2 > .die-list > .back-item[data-side="2"]{
-    transform: rotate3d(-1, 0, 0, 90deg) translateZ(3.66rem);
+    transform: rotate3d(-1, 0, 0, 90deg) translateZ(3.7rem);
   }
   #dices-2 > .die-list > .back-item[data-side="3"]{
-    transform: rotate3d(0, 1, 0, 90deg) translateZ(3.66rem);
+    transform: rotate3d(0, 1, 0, 90deg) translateZ(3.7rem);
   }
   #dices-2 > .die-list > .back-item[data-side="4"]{
-    transform: rotate3d(0, -1, 0, 90deg) translateZ(3.66rem);
+    transform: rotate3d(0, -1, 0, 90deg) translateZ(3.7rem);
   }
   #dices-2 > .die-list > .back-item[data-side="5"]{
-    transform: rotate3d(1, 0, 0, 90deg) translateZ(3.66rem);
+    transform: rotate3d(1, 0, 0, 90deg) translateZ(3.7rem);
   }
   #dices-2 > .die-list > .back-item[data-side="6"]{
-    transform: rotate3d(1, 0, 0, 180deg) translateZ(3.66rem);
+    transform: rotate3d(1, 0, 0, 180deg) translateZ(3.7rem);
   }
 
   #dices-2 > .die-list > .die-item[data-side="1"] {
-    transform: rotate3d(0, 0, 0, 90deg) translateZ(3.8rem);
+    transform: rotate3d(0, 0, 0, 90deg) translateZ(3.78rem);
   }
   #dices-2 > .die-list > .die-item[data-side="2"] {
-    transform: rotate3d(-1, 0, 0, 90deg) translateZ(3.8rem);
+    transform: rotate3d(-1, 0, 0, 90deg) translateZ(3.78rem);
   }
   #dices-2 > .die-list > .die-item[data-side="3"] {
-    transform: rotate3d(0, 1, 0, 90deg) translateZ(3.8rem);
+    transform: rotate3d(0, 1, 0, 90deg) translateZ(3.78rem);
   }
   #dices-2 > .die-list > .die-item[data-side="4"] {
-    transform: rotate3d(0, -1, 0, 90deg) translateZ(3.8rem);
+    transform: rotate3d(0, -1, 0, 90deg) translateZ(3.78rem);
   }
   #dices-2 > .die-list > .die-item[data-side="5"] {
-    transform: rotate3d(1, 0, 0, 90deg) translateZ(3.8rem);
+    transform: rotate3d(1, 0, 0, 90deg) translateZ(3.78rem);
   }
   #dices-2 > .die-list > .die-item[data-side="6"] {
-    transform: rotate3d(1, 0, 0, 180deg) translateZ(3.8rem);
+    transform: rotate3d(1, 0, 0, 180deg) translateZ(3.78rem);
   }
 
 
